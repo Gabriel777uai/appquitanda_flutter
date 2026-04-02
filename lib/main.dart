@@ -1,4 +1,4 @@
-import 'package:appquitanda_flutter/src/auth/singn_in_screen.dart';
+import 'package:appquitanda_flutter/src/pages/auth/singn_in_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green)
       ),
       debugShowCheckedModeBanner: false,
       home: const SingnInScreen(),
