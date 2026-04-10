@@ -1,4 +1,6 @@
+import 'package:appquitanda_flutter/src/models/cart_item_model.dart';
 import 'package:appquitanda_flutter/src/models/item_model.dart';
+import 'package:appquitanda_flutter/src/models/user_model.dart';
 
 ItemModel apple = ItemModel(
   itemName: "Maçã",
@@ -30,7 +32,7 @@ ItemModel kiwi = ItemModel(
   description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
   price: 2.99,
-  unit: "kg",
+  unit: "Un",
 );
 ItemModel mango = ItemModel(
   itemName: "Manga",
@@ -58,3 +60,11 @@ List<String> categories = [
   "Temperos",
   "Cereais",
 ];
+
+List<CartItemModel> cartItems = [
+  CartItemModel(item: apple, quantity: 2),
+  CartItemModel(item: mango, quantity: 3),
+  CartItemModel(item: guava, quantity: 1),
+];
+
+UserModel user = UserModel(name: "Gabriel", email: "gsb4665004@gmail.com", phone: "62 9 9832-6448", cpf: "999.999.999-99", password: "123456789");

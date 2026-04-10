@@ -1,4 +1,4 @@
-import 'package:appquitanda_flutter/src/pages/auth/components/custom_text_field.dart';
+import 'package:appquitanda_flutter/src/pages/comom_widgets/custom_text_field.dart';
 import 'package:appquitanda_flutter/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';

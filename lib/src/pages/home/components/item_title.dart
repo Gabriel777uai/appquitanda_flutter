@@ -22,7 +22,7 @@ class ItemTitle extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (c) {
-                  return  const ProductScreen();
+                  return  ProductScreen(item: item,);
                 }
               ),
             );
@@ -39,7 +39,12 @@ class ItemTitle extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   //imagem
-                  Expanded(child: Image.asset(item.img)),
+                  Expanded(
+                    child: Hero(
+                      tag: item.img,
+                      child: Image.asset(item.img)
+                      ),
+                    ),
           
                   //nome
                   Text(

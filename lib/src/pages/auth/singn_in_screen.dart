@@ -3,7 +3,7 @@ import 'package:appquitanda_flutter/src/config/custom_colors.dart';
 import 'package:appquitanda_flutter/src/pages/base/base_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:appquitanda_flutter/src/pages/auth/singn_up_screen.dart';
-import 'components/custom_text_field.dart';
+import '../comom_widgets/custom_text_field.dart';
 
 class SingnInScreen extends StatelessWidget {
   const SingnInScreen({super.key});
