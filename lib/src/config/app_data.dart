@@ -1,5 +1,6 @@
 import 'package:appquitanda_flutter/src/models/cart_item_model.dart';
 import 'package:appquitanda_flutter/src/models/item_model.dart';
+import 'package:appquitanda_flutter/src/models/order_model.dart';
 import 'package:appquitanda_flutter/src/models/user_model.dart';
 
 ItemModel apple = ItemModel(
@@ -68,3 +69,19 @@ List<CartItemModel> cartItems = [
 ];
 
 UserModel user = UserModel(name: "Gabriel", email: "gsb4665004@gmail.com", phone: "62 9 9832-6448", cpf: "999.999.999-99", password: "123456789");
+
+List<OrderModel> orders =
+[
+  OrderModel(
+    id: "c1sa32c1as21",
+    createDateTime: DateTime.parse("2021-06-08 00:00:00.00"),
+    overduDateTime: DateTime.parse("2021-06-08 11:30:00.00"),
+    items: [
+      CartItemModel(item: apple, quantity: 2),
+      CartItemModel(item: mango, quantity: 2),
+    ],
+    status: "pending_payment",
+    copyAndPaste: "ncajsdncjs",
+    total: 5.98
+  ),
+];
