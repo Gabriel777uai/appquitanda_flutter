@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:appquitanda_flutter/src/config/custom_colors.dart';
 import 'package:appquitanda_flutter/src/models/cart_item_model.dart';
 import 'package:appquitanda_flutter/src/pages/cart/components/cart_title.dart';
+import 'package:appquitanda_flutter/src/pages/comom_widgets/payment_dialog.dart';
 import 'package:appquitanda_flutter/src/services/util_services.dart';
 import 'package:flutter/material.dart';
 import 'package:appquitanda_flutter/src/config/app_data.dart' as app_data;
@@ -91,6 +92,17 @@ class _CartTabState extends State<CartTab> {
                     ),
                     onPressed: () async {
                       bool? result = await showOrderConfirmate();
+
+                      if (result ?? false) {
+                        showDialog(
+                          context: context,
+                          builder: (_) {
+                            return PaymentDialog(
+                              order: app_data.orders.first,
+                            );
+                          }
+                        );
+                      }
                       print(result);
                     },
                     child: const Text(
