@@ -1,7 +1,7 @@
-import 'package:appquitanda_flutter/src/models/cart_item_model.dart';
-import 'package:appquitanda_flutter/src/models/item_model.dart';
-import 'package:appquitanda_flutter/src/models/order_model.dart';
-import 'package:appquitanda_flutter/src/models/user_model.dart';
+import 'package:Greengrocer/src/models/cart_item_model.dart';
+import 'package:Greengrocer/src/models/item_model.dart';
+import 'package:Greengrocer/src/models/order_model.dart';
+import 'package:Greengrocer/src/models/user_model.dart';
 
 ItemModel apple = ItemModel(
   itemName: "Maçã",

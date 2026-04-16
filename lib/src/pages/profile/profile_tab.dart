@@ -1,6 +1,6 @@
-import 'package:appquitanda_flutter/src/config/custom_colors.dart';
-import 'package:appquitanda_flutter/src/pages/comom_widgets/custom_text_field.dart';
-import 'package:appquitanda_flutter/src/config/app_data.dart' as app_data;
+import 'package:Greengrocer/src/config/custom_colors.dart';
+import 'package:Greengrocer/src/pages/comom_widgets/custom_text_field.dart';
+import 'package:Greengrocer/src/config/app_data.dart' as app_data;
 import 'package:flutter/material.dart';
 
 class ProfileTab extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:appquitanda_flutter/src/models/cart_item_model.dart';
+import 'package:Greengrocer/src/models/cart_item_model.dart';
 
 class OrderModel {
   String id;

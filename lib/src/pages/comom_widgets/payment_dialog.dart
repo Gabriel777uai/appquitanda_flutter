@@ -1,5 +1,5 @@
-import 'package:appquitanda_flutter/src/models/order_model.dart';
-import 'package:appquitanda_flutter/src/services/util_services.dart';
+import 'package:Greengrocer/src/models/order_model.dart';
+import 'package:Greengrocer/src/services/util_services.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 

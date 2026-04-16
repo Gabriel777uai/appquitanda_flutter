@@ -1,7 +1,7 @@
-import 'package:appquitanda_flutter/src/pages/cart/cart_tab.dart';
-import 'package:appquitanda_flutter/src/pages/home/home_tab.dart';
-import 'package:appquitanda_flutter/src/pages/orders/orders_tab.dart';
-import 'package:appquitanda_flutter/src/pages/profile/profile_tab.dart';
+import 'package:Greengrocer/src/pages/cart/cart_tab.dart';
+import 'package:Greengrocer/src/pages/home/home_tab.dart';
+import 'package:Greengrocer/src/pages/orders/orders_tab.dart';
+import 'package:Greengrocer/src/pages/profile/profile_tab.dart';
 import 'package:flutter/material.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -37,8 +37,8 @@ class _BaseScreenState extends State<BaseScreen> {
             currentIndex = index;
             pageController.animateToPage(
               index,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeInOut
+              duration: const Duration(milliseconds: 700),
+              curve: Curves.decelerate
             );
           });
         },

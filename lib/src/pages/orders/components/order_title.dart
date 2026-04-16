@@ -1,9 +1,9 @@
-import 'package:appquitanda_flutter/src/config/custom_colors.dart';
-import 'package:appquitanda_flutter/src/models/cart_item_model.dart';
-import 'package:appquitanda_flutter/src/models/order_model.dart';
-import 'package:appquitanda_flutter/src/pages/comom_widgets/payment_dialog.dart';
-import 'package:appquitanda_flutter/src/pages/orders/components/order_status_widget.dart';
-import 'package:appquitanda_flutter/src/services/util_services.dart';
+import 'package:Greengrocer/src/config/custom_colors.dart';
+import 'package:Greengrocer/src/models/cart_item_model.dart';
+import 'package:Greengrocer/src/models/order_model.dart';
+import 'package:Greengrocer/src/pages/comom_widgets/payment_dialog.dart';
+import 'package:Greengrocer/src/pages/orders/components/order_status_widget.dart';
+import 'package:Greengrocer/src/services/util_services.dart';
 import 'package:flutter/material.dart';
 
 class OrderTitle extends StatelessWidget {

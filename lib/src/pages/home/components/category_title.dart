@@ -1,4 +1,4 @@
-import 'package:appquitanda_flutter/src/config/custom_colors.dart';
+import 'package:Greengrocer/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class CategoryTitle extends StatelessWidget {
@@ -11,7 +11,8 @@ class CategoryTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
       onTap: onPressed,
       child: Align(
         alignment: Alignment.center,

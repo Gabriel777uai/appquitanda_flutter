@@ -1,4 +1,4 @@
-import 'package:appquitanda_flutter/src/models/item_model.dart';
+import 'package:Greengrocer/src/models/item_model.dart';
 
 class CartItemModel {
   ItemModel item;

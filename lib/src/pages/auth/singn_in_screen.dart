@@ -1,8 +1,9 @@
+import 'package:Greengrocer/src/pages/comom_widgets/app_name_widget.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:appquitanda_flutter/src/config/custom_colors.dart';
-import 'package:appquitanda_flutter/src/pages/base/base_screen.dart';
+import 'package:Greengrocer/src/config/custom_colors.dart';
+import 'package:Greengrocer/src/pages/base/base_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:appquitanda_flutter/src/pages/auth/singn_up_screen.dart';
+import 'package:Greengrocer/src/pages/auth/singn_up_screen.dart';
 import '../comom_widgets/custom_text_field.dart';
 
 class SingnInScreen extends StatelessWidget {
@@ -26,28 +27,11 @@ class SingnInScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:  [
                   //Logo app
-                    Text.rich(
-                      TextSpan(
-                        style: const TextStyle(
-                          fontSize: 40,
-                        ),
-                        children: [
-                          const TextSpan(
-                            text: "Green",
-                            style: TextStyle(
-                              color:  Colors.white,
-                              fontWeight: FontWeight.bold
-                            ),  
-                          ),
-                          TextSpan(
-                            text: "grocer",
-                            style: TextStyle(
-                              color:  CustomColors.customColors,
-                            ),  
-                          )
-                        ]
-                      )
+                    const AppNameWidget(
+                      greenTitleColor: Colors.white,
+                      textSize: 40,
                     ),
+                    
           
                     //Categorias
                     SizedBox(

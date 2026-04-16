@@ -1,4 +1,4 @@
-import 'package:appquitanda_flutter/src/config/custom_colors.dart';
+import 'package:Greengrocer/src/config/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class OrderStatusWidget extends StatelessWidget {

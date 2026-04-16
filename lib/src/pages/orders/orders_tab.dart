@@ -1,6 +1,6 @@
-import 'package:appquitanda_flutter/src/pages/orders/components/order_title.dart';
+import 'package:Greengrocer/src/pages/orders/components/order_title.dart';
 import 'package:flutter/material.dart';
-import 'package:appquitanda_flutter/src/config/app_data.dart' as app_data;
+import 'package:Greengrocer/src/config/app_data.dart' as app_data;
 
 class OrdersTab extends StatelessWidget {
   const OrdersTab({super.key});

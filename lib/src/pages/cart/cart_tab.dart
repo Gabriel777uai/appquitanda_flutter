@@ -1,12 +1,12 @@
 import 'dart:math';
 
-import 'package:appquitanda_flutter/src/config/custom_colors.dart';
-import 'package:appquitanda_flutter/src/models/cart_item_model.dart';
-import 'package:appquitanda_flutter/src/pages/cart/components/cart_title.dart';
-import 'package:appquitanda_flutter/src/pages/comom_widgets/payment_dialog.dart';
-import 'package:appquitanda_flutter/src/services/util_services.dart';
+import 'package:Greengrocer/src/config/custom_colors.dart';
+import 'package:Greengrocer/src/models/cart_item_model.dart';
+import 'package:Greengrocer/src/pages/cart/components/cart_title.dart';
+import 'package:Greengrocer/src/pages/comom_widgets/payment_dialog.dart';
+import 'package:Greengrocer/src/services/util_services.dart';
 import 'package:flutter/material.dart';
-import 'package:appquitanda_flutter/src/config/app_data.dart' as app_data;
+import 'package:Greengrocer/src/config/app_data.dart' as app_data;
 
 class CartTab extends StatefulWidget {
   const CartTab({super.key});
@@ -21,6 +21,7 @@ class _CartTabState extends State<CartTab> {
   void removeItemFromCArt(CartItemModel cartItem) {
     setState(() {
       app_data.cartItems.remove(cartItem);
+      utilServices.showToast(message: "${cartItem.item.itemName} removido(a) do carrinho!");
     });
   }
 
@@ -102,6 +103,8 @@ class _CartTabState extends State<CartTab> {
                             );
                           }
                         );
+                      } else {
+                        utilServices.showToast(message: "Pedido não confirmado", isError: true);
                       }
                       print(result);
                     },
