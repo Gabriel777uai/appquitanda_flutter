@@ -1,4 +1,4 @@
-import 'package:Greengrocer/src/pages/auth/singn_in_screen.dart';
+
 import 'package:Greengrocer/src/pages/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 

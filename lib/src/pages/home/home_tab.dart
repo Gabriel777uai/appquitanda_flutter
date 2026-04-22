@@ -1,4 +1,5 @@
 import 'package:Greengrocer/src/pages/comom_widgets/app_name_widget.dart';
+import 'package:Greengrocer/src/pages/comom_widgets/custom_shimmer.dart';
 import 'package:add_to_cart_animation/add_to_cart_animation.dart';
 import 'package:add_to_cart_animation/add_to_cart_icon.dart';
 import 'package:Greengrocer/src/config/custom_colors.dart';
@@ -8,7 +9,6 @@ import 'package:Greengrocer/src/services/util_services.dart';
 import 'package:flutter/material.dart';
 
 import 'package:Greengrocer/src/config/app_data.dart' as app_data;
-import 'package:fluttertoast/fluttertoast.dart';
 
 
 class HomeTab extends StatefulWidget {
@@ -30,6 +30,18 @@ class _HomeTabState extends State<HomeTab> {
   }
 
   final UtilServices utilServices = UtilServices();
+
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      setState(() {
+        isLoading = false;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +120,7 @@ class _HomeTabState extends State<HomeTab> {
             Container(
               padding: const EdgeInsets.only(left: 20),
               height: 40,
-              child: ListView.separated(
+              child: !isLoading ? ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (_, index) {
                   return CategoryTitle(
@@ -123,12 +135,25 @@ class _HomeTabState extends State<HomeTab> {
                 },
                 separatorBuilder: (_, index) => const SizedBox(width: 10),
                 itemCount: app_data.categories.length,
-              ),
+              ) : GridView.count(
+                padding: const EdgeInsets.fromLTRB(01, 0, 16, 16),
+                physics: const BouncingScrollPhysics(),
+                crossAxisCount: 1,
+                children: List.generate(
+                  5,
+                  (index) => CustomShimmer(
+                    height: double.infinity,
+                    width: double.infinity,
+                    
+                  )
+                ),
+                
+              )
             ),
         
             //grid produtos
             Expanded(
-              child: GridView.builder(
+              child: !isLoading ? GridView.builder(
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                 physics: const BouncingScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -144,6 +169,22 @@ class _HomeTabState extends State<HomeTab> {
                     cartAnimationMethod: itemSelectedCartAnimations
                   );
                 },
+              ) : GridView.count(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                physics: const BouncingScrollPhysics(),
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 9 / 11.5,
+                children: List.generate(
+                  10,
+                  (index) => CustomShimmer(
+                    height: double.infinity,
+                    width: double.infinity,
+                    borderRadius: BorderRadius.circular(20),
+                  )
+                ),
+                
               ),
             ),
           ],
